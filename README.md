@@ -3,3 +3,5 @@
  ```
  gatsby develop
  ```
+The server renders at:
+http://localhost:8000/
