@@ -6,6 +6,7 @@ export default function Home() {
   return (
     <div style={{ color: `teal` }}>
       <Link to="/contact/">Contact</Link>
+      <Link to="/about-css-modules/">About CSS Modules</Link>
       <Header headerText="About components"/>
       <h1>Hello Gatsby!</h1>
       <p>What a world.</p>
