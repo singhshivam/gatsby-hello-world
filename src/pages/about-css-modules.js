@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Container from "../components/container"
 import styles from "./about-css-modules.module.css"
@@ -14,12 +15,11 @@ const User = props => (
     </div>
 )
 
-export default function About() {
-    console.log(styles)
+export default function About({ data }) {
     return (
         <Container>
             <Link to="/">Home</Link>
-            <h1>About CSS Modules</h1>
+            <h1>About {data.site.siteMetadata.title}</h1>
             <p>CSS Modules are cool</p>
             <User
                 username="Jane Doe"
@@ -34,3 +34,13 @@ export default function About() {
         </Container>
     )
 }
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
